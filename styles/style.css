@@ -10,8 +10,8 @@ a:focus-visible {
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  background-color: var(--bg-color, #F3EFEC);
-  color: var(--text-color, #312A4E);
+  background-color: var(--bg-color, #000028);
+  color: var(--text-color, #f1b2ce);
   font-family: var(--main-font, sans-serif);
   background-attachment: fixed;
   background-image: var(--page-bg-image);
@@ -25,7 +25,8 @@ a:focus-visible {
 .header {
   position: relative;
   padding: var(--padding);
-  min-block-size: 100vh;
+  min-block-size: 668px;
+  height: 100vh;
   display: grid;
   grid-template-rows: 1fr auto 1fr;
 }
@@ -64,8 +65,8 @@ a:focus-visible {
 .rec::after {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   background-color: var(--decor-color);
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--decor-color);
@@ -202,12 +203,12 @@ a:focus-visible {
   margin-block-end: 50px;
 }
 
-.content-section div {
+.section_advice div {
   display: grid;
   gap: 20px;
 }
 
-.content-section h5 {
+.section_advice h4 {
   font-weight: 400;
 }
 
@@ -236,8 +237,8 @@ a:focus-visible {
   outline: 1px solid currentColor;
 }
 
-.content-section:last-of-type,
-.content-section:last-of-type div {
+.section_images,
+.section_images div {
   display: grid;
   gap: var(--padding);
 }
@@ -263,15 +264,16 @@ a:focus-visible {
     margin-block-end: 80px;
   }
 
-  .content-section:not(:nth-of-type(2n)) {
+  .section_so_hard,
+  .section_advice {
     grid-template-columns: 1fr 2fr;
   }
 
-  .content-section:nth-of-type(2) .content__title {
+  .section_concentration .content__title {
     width: 32%;
   }
 
-  .content-section:last-of-type div {
+  .section_images div {
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -281,24 +283,26 @@ a:focus-visible {
     height: 100%;
   }
 
-  .content-section:last-of-type .image__section:first-of-type,
-  .content-section:last-of-type .image__section:last-of-type {
+  .section_images .image__section:first-of-type,
+  .section_images .image__section:last-of-type {
     grid-column: span 2;
   }
 
-  .content-section:last-of-type .image__section:nth-of-type(2),
-  .content-section:last-of-type .image__section:nth-of-type(3) {
+  .section_images .image__section:nth-of-type(2),
+  .section_images .image__section:nth-of-type(3) {
     grid-row: span 2;
   }
 }
 
 /*(width >=1024px)*/
 @media (min-width: 1024px) {
-  .content-section:not(:nth-of-type(2n)) {
+
+  .section_so_hard,
+  .section_advice {
     grid-template-columns: 32% 66%;
   }
 
-  .content-section:nth-of-type(2) .content-list {
+  .section_concentration .content-list {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -309,7 +313,8 @@ a:focus-visible {
 .footer {
   position: relative;
   text-align: center;
-  min-block-size: 100vh;
+  min-block-size: 668px;
+  height: 100vh;
   display: grid;
   justify-content: center;
   align-content: center;

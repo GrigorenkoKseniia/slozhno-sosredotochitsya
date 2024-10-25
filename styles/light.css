@@ -20,19 +20,6 @@
   --visibility: hidden;
 }
 
-:root.theme-light {
-  --header-title-color: #FFC2E6;
-  --decor-color: #FF8DCB;
-  --hover: rgb(50, 49, 45, 0.4);
-  --text-color: #353430;
-  --text-title-decor: #353430;
-  --bg-color: #FFF1F7;
-  --text-accent-color: #353430;
-  --page-bg-image: url(../images/cover-image-light.png);
-  --visibility: hidden;
-}
-
-
 @media (prefers-color-scheme: light) {
   :root {
     --header-title-color: #FFC2E6;
