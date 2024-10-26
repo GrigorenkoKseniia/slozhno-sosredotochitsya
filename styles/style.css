@@ -197,9 +197,12 @@ a:focus-visible {
   padding: 0 var(--padding);
 }
 
-.content-section:not(:last-of-type) {
+.content-section:not(.section_images) {
   display: grid;
   gap: 20px;
+}
+
+.content-section:not(:last-of-type) {
   margin-block-end: 50px;
 }
 
